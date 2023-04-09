@@ -1,0 +1,14 @@
+h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+
+body {
+  color: yellow;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 20px;
+  background-color: blue;
+  margin: 10%;
+  background-image: url('pic1.jpg');
+  background-repeat: no-repeat;
+}
