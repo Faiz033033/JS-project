@@ -23,7 +23,13 @@ function addExpense() {
 	expenses.push(expense);
 
 	// Store expenses in local storage
-	localStorage.setItem("expenses", JSON.stringify(expenses));
+	axios.post("https://crudcrud.com/api/f8e060e5750f4a9395dc18887583957a/Appoinment",expense)
+	      .then((response) => {
+			console.log(response)
+		  })
+		  .catch((err) => {
+			console.log(err)
+		  })
 
 	// Clear input values
 	document.getElementById("amount").value = "";
@@ -68,33 +74,6 @@ function displayExpenses() {
 	}
 }
 
-function editExpense(index) {
-	// Get expenses from local storage
-	let expenses = localStorage.getItem("expenses");
-	if (expenses) {
-		expenses = JSON.parse(expenses);
-	} else {
-		expenses = [];
-	}
-
-	// Get expense to edit
-	const expense = expenses[index];
-
-	// Set input values
-	document.getElementById("amount").value = expense.amount;
-	document.getElementById("description").value = expense.description;
-	document.getElementById("category").value = expense.category;
-
-	// Remove expense from array
-	expenses.splice(index, 1);
-
-	// Store updated expenses
-    	// Store updated expenses in local storage
-	localStorage.setItem("expenses", JSON.stringify(expenses));
-
-	// Display updated expenses on page
-	displayExpenses();
-}
 
 function deleteExpense(index) {
 	// Get expenses from local storage
@@ -109,7 +88,13 @@ function deleteExpense(index) {
 	expenses.splice(index, 1);
 
 	// Store updated expenses in local storage
-	localStorage.setItem("expenses", JSON.stringify(expenses));
+	axios.post("https://crudcrud.com/api/f8e060e5750f4a9395dc18887583957a/Appoinment",expense)
+	      .then((response) => {
+			console.log(response)
+		  })
+		  .catch((err) => {
+			console.log(err)
+		  })
 
 	// Display updated expenses on page
 	displayExpenses();
