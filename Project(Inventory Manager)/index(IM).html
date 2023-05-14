@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Store Inventory</title>
+    <link rel="stylesheet" href="Style(IM).css">
+</head>
+<body>
+    <div class="container">
+        <h1>General Store Inventory</h1>
+
+        <h2>Available Items</h2>
+        <form id="inventoryForm">
+            <div>
+                <label for="item1">Eclair Chocolate:- Price: Rs. 5</label>
+                <select id="item1" onchange="updatePrice('item1')">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <!-- Add more options if needed -->
+                </select>
+            </div>
+            <br>
+            <br>
+            <div>
+                <label for="item2">Mountain Dew Coldrink:- Price: Rs. 40</label>
+                <select id="item2" onchange="updatePrice('item2')">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <!-- Add more options if needed -->
+                </select>
+            </div>
+            <button type="submit">Add to Cart</button>
+        </form>
+
+        <h2>Cart</h2>
+        <ul id="cartItems"></ul>
+
+        <div id="price">Total Price: Rs. 0</div>
+
+        <h2>Remaining Items</h2>
+        <ul id="remainingItems">
+            <li>Eclair Chocolate - Quantity: <span id="remainingItem1">100</span></li>
+            <li>Mountain Dew Coldrink - Quantity: <span id="remainingItem2">100</span></li>
+        </ul>
+    </div>
+    <script src="main(IM).js"
+    
+</body>
+</html>
+
+
+        
